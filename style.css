@@ -1,0 +1,400 @@
+body {
+  
+  line-height: 1.6;
+  background: #c6c6d2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.hr-scroll, .panel {
+  display: flex;
+  align-items: center;
+}
+
+.panel {
+  height: 100vh;
+  font-size: 5em;
+  justify-content: center;
+  background: #c6c6d2;
+  color: #6b6b82;
+}
+
+.scroller {
+  overflow-x: hidden;
+  position: relative;
+}
+
+.hr-scroll {
+  perspective: 600px;
+  justify-content: space-between;
+  width: 400vw;
+  padding: 0 2vw;
+  height: 100vh;
+  position: relative;
+}
+.hr-scroll[data-direction=right] {
+  transform: translateX(-75%);
+}
+.hr-scroll img {
+  max-width: 40vw;
+  height: auto;
+}
+.hr-scroll .section-title {
+  position: absolute;
+  z-index: 1;
+  font-size: 4em;
+  padding: 0 1em;
+  color: #67647c;
+  mix-blend-mode: plus-lighter;
+  font-size: 50px
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap");
+
+:root {
+  --background-color: linear-gradient(
+    to right,
+    #A7727D, #65647C
+  );
+  --accent-color: #FCC2FC ;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+
+  background: var(--background-color);
+}
+
+.scroll-down {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.scroll-icon {
+  width: 60px;
+  height: 90px;
+  border: 1px solid var(--accent-color);
+  border-radius: 40px;
+}
+
+.scroll-icon::before {
+  content: "";
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  width: 8px;
+  height: 16px;
+  border-radius: 10px;
+  border: 1px solid var(--accent-color);
+  animation: wheel 1.5s ease-in-out infinite;
+}
+
+@keyframes wheel {
+  0% {
+    opacity: 0;
+  }
+
+  20%,
+  70% {
+    opacity: 1;
+  }
+
+  90%,
+  100% {
+    transform: translate(0, 80%);
+    opacity: 0;
+  }
+}
+
+h3 {
+  color: var(--accent-color);
+  font-size: 1.5em;
+  font-weight: 300;
+  margin: 20px 10px;
+}
+
+.welcome-slide {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--accent-color);
+  color: fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clip-path: circle(0px at center center);
+}
+
+.text {
+  position: fixed;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  z-index: 1;
+  font-size: 10vw;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--accent-color);
+  text-align: center;
+  width: 100%;
+}
+
+.text.inner-text {
+color:white;
+ 
+
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200vh;
+  margin-bottom: 5vh;
+  background: var(--accent-color);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.article {
+  color: #fff;
+  max-width: 600px;
+  margin: 1rem;
+}
+
+.article h2 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 2.5rem;
+}
+
+.article p {
+  line-height: 2rem;
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+.slide {
+  transform: translateX(400%);
+  transition: transform 0.5s ease;
+}
+
+.slide:nth-of-type(even) {
+  transform: translateX(-400%);
+}
+
+.slide.in {
+  transform: translateX(0);
+}
+
+.back-to-top {
+  height: 60px;
+  width: 60px;
+  padding: 20px;
+  margin: 40px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.back-to-top i {
+  font-size: 20px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--background-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
+
+
+.bor{
+  border: 4px solid #594545;
+  box-shadow: 10px 5px 5px #2e113d;
+  
+}
+
+
+
+
+body {
+  width: 100%;
+  margin: 0;
+}
+
+#hero-area {
+  background-image: linear-gradient(
+    to right,
+    #A7727D, #65647C
+  );
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+
+#navbar {
+  background-color: rgba(50, 50, 50, 0.5);
+  color: #fff;
+  padding: 1px;
+/* Without the four declarations below (position, width, box-sizing, top), then hero area and navbar are at the top.  With them, there is a white bar on CodePen. On my site that top white bar is not there. */
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  top 0;
+}
+
+#navbar-flexbox {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content:flex-end;
+  
+}
+
+h1 {
+  margin-top: 0;
+  line-height: 6;
+}
+
+#main-body {
+  padding: 5px 25px;
+}
+
+
+
+#hero-arrow {
+  line-height: 5;
+}
+
+
+.navb{
+  text-decoration: none;
+  color:#fff;
+}
+.input{
+ 
+ 
+  padding: 20px;
+ 
+}
+.input-one{
+ background: #f5cfd8;
+  box-shadow: 5px 5px 5px #594545;
+  width: 400px;
+}
+p{
+  color: #958895;
+}
+.mySertificate{
+  text-decoration:none;
+  color:white;
+  font-size: 20px;
+
+}
+
+label{
+  padding: 10px;
+}
+
+.mail{
+  width: 400px;
+  background-color: #fcc2fc ;
+  border-color: white;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+.btnMail{
+  border: 1px solid white;
+  padding: 10px;
+  width:200px ;
+  background-color: #fcc2fc;
+  color: #958895;
+  font-family: 'Open Sans', sans-serif;
+}
+.btnMail:hover{
+  background-color: #958895;
+  color: white;
+  
+}
+
+.btnRu, .btnEn{
+  padding: 5px;
+  background: transparent;
+  border: none;
+  
+}
+.btnRu:hover{
+  color:white;
+}
+.btnEn:hover{
+  color:white;
+}
+.helloOne, .helloTwo, #navbar, .myProjects, .myProjectsTwo{
+  font-family: 'Open Sans', sans-serif;
+
+}
+.sertRu{
+  display: none;
+}
+.sertEn{
+  display: block;
+}
+.btnActive{
+  padding: 5px;
+  background: transparent;
+  border: none;
+  color:white
+}
+.btnNoactive{
+  padding: 5px;
+  background: transparent;
+  border: none;
+  color: black;
+}
